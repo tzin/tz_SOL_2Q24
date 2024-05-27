@@ -1,0 +1,41 @@
+Streaming transaction logs mentioning HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei. Confirmed commitment
+Transaction executed in slot 2:
+  Signature: 2tWfsHGZNbTgte3T8eN3n1KMnntePLV8edgBCfy43g2iKKcQkH74792bVSCdUVZmw1Xa3Fx52UwwsjwJW7WWMThy
+  Status: Ok
+  Log Messages:
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei invoke [1]
+    Program log: Instruction: Initialize
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei consumed 12001 of 200000 compute units
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei success
+Transaction executed in slot 3:
+  Signature: 45QrRJu8934hDcEZxL3vmc7PPTJUbTKWEKJ8gifFnPqL3rfojgUh6Rv53a5iwnt5h6ePQjvnhc6nVkMigLP2mzEZ
+  Status: Ok
+  Log Messages:
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei invoke [1]
+    Program log: Instruction: Deposit
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei consumed 6900 of 200000 compute units
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei success
+Transaction executed in slot 4:
+  Signature: HZPtHARitpHhHhda2UziZVznirqjG5rrC4Xtk2LTn9oQe92KvsvASzPQZNQeuJabKoZaZbQJv1DSwdKZvHa5aBu
+  Status: Ok
+  Log Messages:
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei invoke [1]
+    Program log: Instruction: Withdraw
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei consumed 6955 of 200000 compute units
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei success
+Transaction executed in slot 5:
+  Signature: 4zmgMw9YV1bYZRWZ98UhE4UJuP3VTHvAFfhzeJpNPJi3EhQNndVCB7F9DGtw7D7AKHav7QVznTjwEoeqGgWXa2oK
+  Status: Ok
+  Log Messages:
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei invoke [1]
+    Program log: Instruction: Close
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei consumed 7308 of 200000 compute units
+    Program HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei success

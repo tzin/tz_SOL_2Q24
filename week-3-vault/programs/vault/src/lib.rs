@@ -1,6 +1,6 @@
 use anchor_lang::{prelude::*, system_program::{transfer, Transfer}};
 
-declare_id!("3tF8wDtNHnNXuAGrUBgV4raiCTYEyhdjRsTNoVzjB3gg");
+declare_id!("HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei");
 
 #[program]
 pub mod vault {
@@ -12,13 +12,13 @@ pub mod vault {
         Ok(())
     }
 
-    pub fn deposit(ctx: Context<Deposit>, amount: u64) -> Result<()> {
+    pub fn deposit(ctx: Context<Ops>, amount: u64) -> Result<()> {
         ctx.accounts.deposit(amount)?;
 
         Ok(())
     }
 
-    pub fn withdraw(ctx: Context<Withdraw>, amount: u64) -> Result<()> {
+    pub fn withdraw(ctx: Context<Ops>, amount: u64) -> Result<()> {
         ctx.accounts.withdraw(amount)?;
 
         Ok(())
@@ -61,7 +61,7 @@ impl<'info> Initialize<'info> {
 }
 
 #[derive(Accounts)]
-pub struct Deposit<'info> {
+pub struct Ops<'info> {
     #[account(mut)]
     pub user: Signer<'info>,
     #[account(
@@ -79,7 +79,7 @@ pub struct Deposit<'info> {
     pub system_program: Program<'info, System>,
 }
 
-impl<'info> Deposit<'info> {
+impl<'info> Ops<'info> {
     pub fn deposit(&mut self, amount: u64) -> Result<()> {
 
         let cpi_program = self.system_program.to_account_info();
@@ -95,27 +95,6 @@ impl<'info> Deposit<'info> {
 
         Ok(())
     }
-}
-
-#[derive(Accounts)]
-pub struct Withdraw<'info> {
-    #[account(mut)]
-    pub user: Signer<'info>,
-    #[account(
-        mut,
-        seeds = [b"vault", vault_state.key().as_ref()],
-        bump = vault_state.vault_bump,
-    )]
-    pub vault: SystemAccount<'info>,
-    #[account(
-        seeds = [b"state", user.key().as_ref()],
-        bump = vault_state.state_bump,
-    )]
-    pub vault_state: Account<'info, VaultState>,
-    pub system_program: Program<'info, System>,
-}
-
-impl<'info> Withdraw<'info> {
     pub fn withdraw(&mut self, amount: u64) -> Result<()> {
         let cpi_program = self.system_program.to_account_info();
 
@@ -139,6 +118,8 @@ impl<'info> Withdraw<'info> {
         Ok(())
     }
 }
+
+
 
 #[derive(Accounts)]
 pub struct Close<'info> {

@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-vault = "FHiSSmRJQdUmp6Z7uZjj2U99BLS8yreeTLUd6xc9ReCD"
+vault = "HxTiJMxadoUhrSUNc3S8rMveXWRPbv2dHkyssExpoqei"
 
 [registry]
 url = "https://api.apr.dev"
