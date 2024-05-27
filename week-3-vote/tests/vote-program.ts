@@ -34,28 +34,24 @@ describe("vote-program", () => {
   it("Upvote!", async() => {
     const tx = await program.methods
     .upvote(url)
-    .accounts({
-      voteAccount,
-    })
+    .accounts({})
     .rpc();
     console.log("Your transaction signature", tx);
 
     let voteState = await program.account.voteState.fetch(voteAccount);
     console.log("\nYour vote score after upvote is", voteState.score.toString());
-    console.log("\nLast voted address is", voteState.last_address.toString());
+    console.log("\nLast voted address is", voteState.lastAddress.toString());
   })
   it("Downvote!", async() => {
     const tx = await program.methods
     .downvote(url)
-    .accounts({
-      voteAccount,
-    })
+    .accounts({})
     .rpc();
     console.log("Your transaction signature", tx);
 
     let voteState = await program.account.voteState.fetch(voteAccount);
     console.log("\nYour vote score after downvote is", voteState.score.toString());
-    console.log("\nLast voted address is", voteState.last_address.toString());
+    console.log("\nLast voted address is", voteState.lastAddress.toString());
 
   })
 

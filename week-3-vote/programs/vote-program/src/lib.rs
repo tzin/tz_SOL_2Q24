@@ -13,13 +13,13 @@ pub mod vote_program {
 
     pub fn upvote(ctx: Context<Vote>, _url: String) -> Result<()> {
         ctx.accounts.upvote()?;
-        ctx.accounts.vote_account.last_address = Some(ctx.accounts.signer.key());
+     //   ctx.accounts.vote_account.last_address = Some(ctx.accounts.signer.key());
         Ok(())
     }
 
     pub fn downvote(ctx: Context<Vote>, _url: String) -> Result<()> {
         ctx.accounts.downvote()?;
-        ctx.accounts.vote_account.last_address = Some(ctx.accounts.signer.key());
+   //     ctx.accounts.vote_account.last_address = Some(ctx.accounts.signer.key());
         Ok(())
     }
 }
@@ -52,11 +52,13 @@ impl<'info> Initialize<'info> {
 #[derive(Accounts)]
 #[instruction(_url: String)]
 pub struct Vote<'info> {
+    #[account(mut)]
+    pub payer: Signer<'info>,
     #[account(
         mut,
         seeds = [_url.as_bytes().as_ref()],
         bump = vote_account.bump,
-//        address = vote_account.last_address,
+        //address = vote_account.last_address,
     )]
     pub vote_account: Account<'info, VoteState>,
 }
@@ -64,13 +66,13 @@ pub struct Vote<'info> {
 impl<'info> Vote<'info> {
     pub fn upvote(&mut self) -> Result<()> {
         self.vote_account.score += 1;
-  //      self.vote_account.last_address = Some(accounts.Signer.key());
+        self.vote_account.last_address = Some(self.payer.key());
         Ok(())
     }
 
     pub fn downvote(&mut self) -> Result<()> {
         self.vote_account.score -= 1;
- //       self.vote_account.last_address = Some(accounts.Signer.key());
+        self.vote_account.last_address = Some(self.payer.key());
         Ok(())
     }
    

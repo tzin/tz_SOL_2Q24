@@ -27,6 +27,11 @@ export type VoteProgram = {
       ],
       "accounts": [
         {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
           "name": "voteAccount",
           "writable": true,
           "pda": {
@@ -102,6 +107,11 @@ export type VoteProgram = {
       ],
       "accounts": [
         {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
           "name": "voteAccount",
           "writable": true,
           "pda": {
@@ -150,6 +160,12 @@ export type VoteProgram = {
           {
             "name": "bump",
             "type": "u8"
+          },
+          {
+            "name": "lastAddress",
+            "type": {
+              "option": "pubkey"
+            }
           }
         ]
       }

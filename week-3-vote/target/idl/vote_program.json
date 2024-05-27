@@ -21,6 +21,11 @@
       ],
       "accounts": [
         {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
           "name": "vote_account",
           "writable": true,
           "pda": {
@@ -96,6 +101,11 @@
       ],
       "accounts": [
         {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
           "name": "vote_account",
           "writable": true,
           "pda": {
@@ -144,6 +154,12 @@
           {
             "name": "bump",
             "type": "u8"
+          },
+          {
+            "name": "last_address",
+            "type": {
+              "option": "pubkey"
+            }
           }
         ]
       }
