@@ -1,0 +1,27 @@
+Streaming transaction logs mentioning EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb. Confirmed commitment
+Transaction executed in slot 2:
+  Signature: mtWdDcRT6odnHQTdj1FmbmcuwnLh4vLvhnzmS8RnugQThf9SDFkYDSS2X15JxzTnpN67obmEDsxGTcexyx2r8Bx
+  Status: Ok
+  Log Messages:
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb invoke [1]
+    Program log: Instruction: Initialize
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb consumed 7930 of 200000 compute units
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb success
+Transaction executed in slot 3:
+  Signature: 2ctFM2mXDMjB5jYRSn9NdL6bEyHMwvqRwhkW4VmnCVXGTSF9sBMu8sxnU5AsWd7kHCGPa71mRtJUh2ueTn1Ri6Pv
+  Status: Ok
+  Log Messages:
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb invoke [1]
+    Program log: Instruction: Upvote
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb consumed 3465 of 200000 compute units
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb success
+Transaction executed in slot 4:
+  Signature: 2wRbJLYjGUdkJEmuocXc4H4hM7JxrfSH1PAMfZ9tGEpreLdKE7qD7bNDUjCKqZLcgENcaKc9W4YsLaJrMFHtUtXa
+  Status: Ok
+  Log Messages:
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb invoke [1]
+    Program log: Instruction: Downvote
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb consumed 3465 of 200000 compute units
+    Program EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb success

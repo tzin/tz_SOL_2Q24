@@ -1,0 +1,152 @@
+{
+  "address": "EaFfpWf72ewSALLQdZSum6ThidXy81riWjcKa3aS8kyb",
+  "metadata": {
+    "name": "vote_program",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "Created with Anchor"
+  },
+  "instructions": [
+    {
+      "name": "downvote",
+      "discriminator": [
+        73,
+        64,
+        0,
+        158,
+        133,
+        185,
+        55,
+        7
+      ],
+      "accounts": [
+        {
+          "name": "vote_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "path": "_url"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "_url",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "initialize",
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
+      "accounts": [
+        {
+          "name": "payer",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "vote_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "path": "_url"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "_url",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "upvote",
+      "discriminator": [
+        197,
+        8,
+        144,
+        51,
+        126,
+        41,
+        156,
+        81
+      ],
+      "accounts": [
+        {
+          "name": "vote_account",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "path": "_url"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "_url",
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "VoteState",
+      "discriminator": [
+        100,
+        177,
+        100,
+        106,
+        158,
+        188,
+        195,
+        137
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "VoteState",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "score",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+/Users/thazin/Desktop/LFG/firstclass/solana-starter/week-3-vote/target/sbf-solana-solana/release/vote_program.so: /Users/thazin/Desktop/LFG/firstclass/solana-starter/week-3-vote/programs/vote-program/src/lib.rs
